@@ -29,12 +29,6 @@ function setActiveNavLink(containerSelector) {
       if (currentPath.includes(href)) {
         link.classList.add('active');
       }
-      /* if (
-        (current === '' && (href === 'about.html' || href === '#')) ||
-        (href && href !== '#' && href === current)
-      ) {
-        link.classList.add('active');
-      } */
       // Special case for homepage or #
       if ((currentPath === 'index.html' || currentPath === '') && (href === '/' || href === '#')) {
         link.classList.add('active');
