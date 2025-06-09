@@ -1,0 +1,75 @@
+@import url('reset.css');
+@import url('variables.css');
+
+.navbar-brand,
+.navbar-brand:hover,
+.navbar-brand:focus,
+#offcanvasNavbarLabel{
+  color: var(--light-color);
+  font-weight: bold;
+
+  transition: letter-spacing 0.3s ease;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus,
+#offcanvasNavbarLabel:hover{
+  letter-spacing: 2px;
+}
+.nav-link {
+  color: var(--light-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  border-radius: 5px;;
+}
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.active {
+  color: var(--primary-color) !important;
+  background: var(--light-color)
+}
+
+
+.offcanvas .nav-link.active,
+.offcanvas .nav-link:hover,
+.offcanvas .nav-link:focus {
+  padding-left:1rem;
+}
+
+
+.hero {
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') center center/cover no-repeat;
+  min-height: 150px;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+  border-radius: 0.5rem;
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.card-img-top,
+.carousel-inner img,
+.carousel-item img,
+.project-card img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  height: 200px; 
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+#projectsGallery .card-title{
+  font-size: calc(70% + 0.5vw);
+  font-weight: bold;
+}
