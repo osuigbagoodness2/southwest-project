@@ -43,7 +43,7 @@ function setActiveNavLink(containerSelector) {
   const tryIncludeHeader = () => {
     const header = document.querySelector('.header-include');
     if (header && !header.dataset.loaded) {
-      includeHTML('.header-include', '/__header.html');
+      includeHTML('.header-include', './__header.html');
       header.dataset.loaded = "true";
       return true;
     }
@@ -61,7 +61,7 @@ function setActiveNavLink(containerSelector) {
 document.addEventListener('DOMContentLoaded', function() {
   const footer = document.querySelector('.footer-include');
   if (footer) {
-    includeHTML('.footer-include', '/__footer.html');
+    includeHTML('.footer-include', './__footer.html');
   }
 });
 
