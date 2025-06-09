@@ -20,17 +20,18 @@ function setActiveNavLink(containerSelector) {
     const container = document.querySelector(containerSelector);
     if (!container) return;
     const links = container.querySelectorAll('.nav-link');
-    const currentPath = window.location.pathname || 'index.html';
+    const currentPath = window.location.pathname;
     links.forEach(link => {
       // Remove any existing 'active'
       link.classList.remove('active');
       // Compare href (last part) to current page
       const href = link.getAttribute('href');
-      if (currentPath.includes(href)) {
+      if (currentPath.includes(href) && currentPath != '' & href != '/') {
         link.classList.add('active');
+        console.log(currentPath)
       }
       // Special case for homepage or #
-      if ((currentPath === 'index.html' || currentPath === '') && (href === '/' || href === '#')) {
+      if ((currentPath === 'index.html' || currentPath === '/') && (href === '/' || href === '#')) {
         link.classList.add('active');
       }
     });
