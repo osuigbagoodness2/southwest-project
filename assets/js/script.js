@@ -28,7 +28,6 @@ function setActiveNavLink(containerSelector) {
       const href = link.getAttribute('href');
       if (currentPath.includes(href) && currentPath != '' & href != '/') {
         link.classList.add('active');
-        console.log(currentPath)
       }
       // Special case for homepage or #
       if ((currentPath === 'index.html' || currentPath === '/') && (href === '/' || href === '#')) {
